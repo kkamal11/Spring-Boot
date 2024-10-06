@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    <bean id="alien" class="org.example.Alien" scope="prototype">-->
+
+<!--    </bean>-->
+    <bean id="alien" class="org.example.Alien" scope="singleton">
+<!--        <property name="age" value="21"></property> &lt;!&ndash;It assignes age = 21 &ndash;&gt;-->
+
+        <!--        calling single param constructor-->
+<!--        <constructor-arg value="25" />-->
+
+        <!--        to call two param constructor-->
+<!--        <constructor-arg value="55" />-->
+<!--        <constructor-arg ref="laptop" />-->
+
+        <constructor-arg index="0" value="55" />  <!--  can also use type attribute -->
+        <constructor-arg index="1" ref="laptop" />
+
+        <property name="lap" ref="laptop"></property>
+    </bean>
+    <bean id="laptop" class="org.example.Laptop">
+
+    </bean>
+
+</beans>
