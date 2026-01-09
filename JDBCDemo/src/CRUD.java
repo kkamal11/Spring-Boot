@@ -3,7 +3,7 @@ public class CRUD {
     public static void main(String[] args) {
         String url = "jdbc:postgresql://localhost:5432/java_db";
         String user = "postgres";
-        String password = "kamaliitm211";
+        String password = "password";
         try{
             Class.forName("org.postgresql.Driver");
         }
@@ -39,3 +39,4 @@ public class CRUD {
 
     }
 }
+
